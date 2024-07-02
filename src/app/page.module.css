@@ -1,10 +1,13 @@
 .main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
+}
+
+#canvas {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .description {
