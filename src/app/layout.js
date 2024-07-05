@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 import StoreProvider from "./StoreProvider";
 import AuthProvider from "./AuthProvider";
 

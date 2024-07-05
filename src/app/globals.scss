@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@font-face {
+  font-family: "hangyaboly";
+  src: url("/hangyaboly.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --color-primary: #e95677;
+  --color-secordary: #ae54cd;
+  --font-heading: "hangyaboly", serif;
+}
+
+.button-primary {
+  padding: 10px 20px;
+  background-color: var(--color-secordary);
+  color: white;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  &:hover {
+    background-color: darken(#ae54cd, 10%);
+  }
+  &:disabled {
+    background-color: gray;
+  }
+}
+
+.heading {
+  font-family: var(--font-heading);
+}
+
+.button-secondary {
+  padding: 10px 20px;
+  background-color: rgb(91, 147, 192);
+  color: white;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  display: inline-block;
+  text-decoration: none;
+
+  transition: 0.3s;
+  &:hover {
+    background-color: darken(rgb(91, 147, 192), 10%);
+  }
+
+  &:disabled {
+    background-color: gray;
+  }
+}

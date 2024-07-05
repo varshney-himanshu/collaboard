@@ -7,7 +7,6 @@ function AuthProvider({ children }) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("dispatching check token");
     dispatch(checkToken());
   }, [dispatch]);
 

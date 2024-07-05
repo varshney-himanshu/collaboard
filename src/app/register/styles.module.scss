@@ -1,0 +1,31 @@
+.register {
+  text-align: center;
+  &__logo {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 50px auto 20px;
+  }
+
+  h1 {
+    color: gray;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 20px auto;
+
+    input {
+      width: 100%;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      border: 2px solid #a8a8a8;
+    }
+
+    a {
+      margin-top: 10px;
+    }
+  }
+}

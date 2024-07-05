@@ -1,9 +1,12 @@
 "use client";
-
 import { login } from "@/redux/auth.slice";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import logoImg from "@/assets/logo.png";
+import Image from "next/image";
+import styles from "./styles.module.scss";
 
 function LoginPage() {
   const { loading, error, isAuthenticated } = useSelector(
@@ -35,8 +38,13 @@ function LoginPage() {
   }, [error]);
 
   return (
-    <div>
-      <h1>Login page</h1>
+    <main className={styles["login"]}>
+      <Image
+        alt="Collaboard Logo"
+        className={styles["login__logo"]}
+        src={logoImg}
+      />
+      <h1 className="heading">Login</h1>
       <form onSubmit={handleOnSubmit}>
         <input
           name="username"
@@ -55,14 +63,22 @@ function LoginPage() {
           placeholder="Enter password"
           required
         ></input>
-        <input disabled={loading} type="submit" value={"Submit"} />
-        {loading && <div>Processing... please wait.</div>}
-        {isAuthenticated && <div>you are now authenticated.</div>}
+        <button
+          role="submit"
+          className="button-primary"
+          disabled={loading}
+          type="submit"
+        >
+          {loading ? "Submitting..." : "Submit"}
+        </button>
+        <Link className="button-secondary" href="/register">
+          Register
+        </Link>
         {error && error.message && (
           <div style={{ color: "red" }}>{error.message}</div>
         )}
       </form>
-    </div>
+    </main>
   );
 }
 
