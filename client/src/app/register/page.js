@@ -50,7 +50,7 @@ function RegisterPage() {
       setLoading(false);
       return;
     }
-
+    /* test */
     try {
       await authService.register(fullName, username, password);
       setSuccess({ message: "User created successfully. Please login." });
